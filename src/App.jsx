@@ -15,8 +15,9 @@ const App = () => {
   const swapCurrency = () => {
     setFrom(to);
     setTo(from);
+    const newConvertedAmount = amount * currencyInfo[from];
     setConvertedAmount(amount); // Update the converted amount when swapping
-    setAmount(convertedAmount); // Set the amount to the converted amount after swap
+    setAmount(newConvertedAmount); // Set the amount to the converted amount after swap
   };
 
   const convert = () => {
